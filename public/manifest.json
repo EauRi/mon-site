@@ -1,0 +1,22 @@
+{
+    "name": "Événements Montréal 2025",
+    "short_name": "Événements",
+    "description": "Consultez et ajoutez des événements à Montréal.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#6b46c1",
+    "icons": [
+      {
+        "src": "/favicon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/favicon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

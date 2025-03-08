@@ -122,7 +122,7 @@ export default function Calendar() {
         <div className="flex justify-end space-x-4">
           <button 
             onClick={() => setIsAddModalOpen(true)} 
-            className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-400"
+            className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-400"
           >
             Ajouter
           </button>

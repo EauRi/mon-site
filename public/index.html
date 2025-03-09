@@ -7,6 +7,11 @@
   <link rel="icon" type="image/png" href="/android-icon-192x192.png">
   <link rel="manifest" href="/site.webmanifest">
   <title>Événements Montréal - Pris</title>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>  
 </head>
 <body>
   <div id="root"></div>

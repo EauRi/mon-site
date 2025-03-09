@@ -115,20 +115,20 @@ export default function Calendar() {
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-start bg-black text-white p-4">
       {/* Header avec les boutons */}
-      <header className="w-full flex justify-between items-center mb-6">
-      <h1 className="text-3xl font-bold text-center absolute left-1/2 transform -translate-x-1/2">
-        Événements 2025 - Montréal
-      </h1>
-        <div className="flex justify-end space-x-4">
+      <header className="w-full flex flex-col sm:flex-row justify-between items-center mb-6">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 mb-4 sm:mb-0">
+          Événements 2025 - Montréal
+        </h1>
+        <div className="flex justify-center sm:justify-end space-x-2 sm:space-x-4">
           <button 
             onClick={() => setIsAddModalOpen(true)} 
-            className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-400"
+            className="px-2 py-1 sm:px-4 sm:py-2 bg-green-500 text-white rounded-lg hover:bg-green-400 text-sm sm:text-base"
           >
             Ajouter
           </button>
           <button 
             onClick={() => setIsDeleteModalOpen(true)}
-            className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-400"
+            className="px-2 py-1 sm:px-4 sm:py-2 bg-red-500 text-white rounded-lg hover:bg-red-400 text-sm sm:text-base"
           >
             Supprimer
           </button>
@@ -187,7 +187,7 @@ export default function Calendar() {
       {/* Modale d'affichage des détails */}
       {selectedEvent && (
         <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
-          <div className="bg-purple-200 text-black p-6 rounded-lg shadow-lg max-w-lg relative">
+          <div className="bg-purple-200 text-black p-4 sm:p-6 rounded-lg shadow-lg max-w-xs sm:max-w-lg relative">
             <h2 className="text-2xl font-bold mb-2">{selectedEvent.name}</h2>
             <p><strong>Date:</strong> {new Date(selectedEvent.date).toLocaleDateString()}</p>
             <p><strong>Description:</strong> {selectedEvent.description}</p>
@@ -215,7 +215,7 @@ export default function Calendar() {
       {/* Modale d'ajout d'événement */}
       {isAddModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
-          <div className="bg-purple-200 text-black p-6 rounded-lg shadow-lg max-w-lg relative">
+          <div className="bg-purple-200 text-black p-4 sm:p-6 rounded-lg shadow-lg max-w-xs sm:max-w-lg relative">
             <h2 className="text-2xl font-bold mb-4">Ajouter un Événement</h2>
             <form
               onSubmit={(e) => {
@@ -280,7 +280,7 @@ export default function Calendar() {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-400"
+                  className="px-2 py-1 sm:px-4 sm:py-2 bg-green-500 text-white rounded-lg hover:bg-green-400"
                 >
                   Ajouter
                 </button>
@@ -291,7 +291,7 @@ export default function Calendar() {
       )}
       {isDeleteModalOpen && (
       <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
-        <div className="bg-purple-200 text-black p-6 rounded-lg shadow-lg max-w-lg relative">
+        <div className="bg-purple-200 text-black p-4 sm:p-6 rounded-lg shadow-lg max-w-xs sm:max-w-lg relative">
           <h2 className="text-2xl font-bold mb-4">Supprimer un Événement</h2>
 
           {/* Liste des événements */}

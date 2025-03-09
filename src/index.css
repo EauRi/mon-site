@@ -37,8 +37,20 @@ body {
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #242424;
 }
+
+#app {
+  flex-grow: 1;
+  background-color: #242424;
+  min-height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+#app > div {
+  max-width: 100%;
+  margin: auto;
+}
+
 
 /* Titre */
 h1 {

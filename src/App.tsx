@@ -113,7 +113,7 @@ export default function Calendar() {
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-start bg-black text-white p-4">
+    <div id="app" className="flex flex-col items-center justify-start text-white p-4">
       {/* Header avec les boutons */}
       <header className="w-full flex flex-col sm:flex-row justify-between items-center mb-6">
         <h1 className="text-2xl sm:text-3xl font-bold text-center sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 mb-4 sm:mb-0">

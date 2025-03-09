@@ -136,12 +136,12 @@ export default function Calendar() {
       </header>
 
       {/* Boutons des mois */}
-      <div className="flex flex-wrap justify-center gap-2 mb-6">
+      <div className="flex flex-wrap justify-center gap-1 sm:gap-2 mb-4 sm:mb-6">
         {months.map((month, index) => (
           <button
             key={index}
             onClick={() => setCurrentMonth(index)}
-            className={`px-3 py-2 text-sm font-semibold rounded-lg ${
+            className={`px-2 py-1 text-xs sm:px-3 sm:py-2 sm:text-sm font-semibold rounded-lg ${
               currentMonth === index ? "bg-purple-500 text-black" : "bg-gray-700 hover:bg-gray-600"
             }`}
           >
@@ -151,7 +151,7 @@ export default function Calendar() {
       </div>
 
       {/* Calendrier */}
-      <div className="w-full max-w-6xl grid grid-cols-7 gap-2 bg-gray-900 p-4 rounded-lg">
+      <div className="w-full max-w-6xl grid grid-cols-7 gap-1 sm:gap-2 bg-gray-900 p-2 sm:p-4 rounded-lg text-xs sm:text-lg">
         {/* Jours de la semaine */}
         {["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"].map((day) => (
           <div key={day} className="text-center font-bold py-2">{day}</div>

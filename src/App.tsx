@@ -151,7 +151,7 @@ export default function Calendar() {
       </div>
 
       {/* Calendrier */}
-      <div className="w-full max-w-6xl grid grid-cols-7 gap-1 bg-gray-900 p-0 sm:p-4 rounded-lg">
+      <div className="w-full max-w-6xl grid grid-cols-7 gap-1 sm:gap-2 bg-gray-900 p-1 sm:p-4 rounded-lg text-xs sm:text-lg">
         {/* Jours de la semaine */}
         {["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"].map((day) => (
           <div key={day} className="text-center font-bold py-2">{day}</div>

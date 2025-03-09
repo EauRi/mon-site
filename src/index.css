@@ -33,10 +33,12 @@ a:hover {
 /* Styles du body */
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #app {

@@ -119,7 +119,7 @@ export default function Calendar() {
         <h1 className="text-2xl sm:text-3xl font-bold text-center sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 mb-4 sm:mb-0">
           Événements 2025 - Montréal
         </h1>
-        <div className="flex justify-center sm:justify-end space-x-2 sm:space-x-4">
+        <div className="flex justify-center sm:justify-end space-x-1 sm:space-x-2">
           <button 
             onClick={() => setIsAddModalOpen(true)} 
             className="px-2 py-1 sm:px-4 sm:py-2 bg-green-500 text-white rounded-lg hover:bg-green-400 text-sm sm:text-base"
@@ -151,7 +151,7 @@ export default function Calendar() {
       </div>
 
       {/* Calendrier */}
-      <div className="w-full max-w-6xl grid grid-cols-7 gap-1 sm:gap-2 bg-gray-900 p-2 sm:p-4 rounded-lg text-xs sm:text-lg">
+      <div className="w-full max-w-6xl grid grid-cols-7 gap-1 sm:gap-2 bg-gray-900 p-1 sm:p-4 rounded-lg text-xs sm:text-lg">
         {/* Jours de la semaine */}
         {["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"].map((day) => (
           <div key={day} className="text-center font-bold py-2">{day}</div>

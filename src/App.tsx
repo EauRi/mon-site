@@ -7,6 +7,14 @@ const supabase = createClient(
   import.meta.env.VITE_SUPABASE_ANON_KEY
 );
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log('Service Worker enregistré'))
+      .catch(err => console.log('Erreur Service Worker', err));
+  });
+}
+
 // Liste des mois
 const months = [
   "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",

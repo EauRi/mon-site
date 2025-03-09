@@ -224,67 +224,80 @@ export default function Calendar() {
               }}
               className="space-y-4"
             >
-              <input
-                type="date"
-                name="date"
-                value={newEvent.date}
-                onChange={handleChange}
-                className="w-full p-2 rounded-lg bg-gray-800 text-white"
-              />
-              <input
-                type="text"
-                name="name"
-                placeholder="Nom de l'événement"
-                value={newEvent.name}
-                onChange={handleChange}
-                className="w-full p-2 rounded-lg bg-gray-800 text-white"
-              />
-              <textarea
-                name="description"
-                placeholder="Description"
-                value={newEvent.description}
-                onChange={handleChange}
-                className="w-full p-2 rounded-lg bg-gray-800 text-white"
-              />
-              <input
-                type="number"
-                name="promo"
-                placeholder="Promo (%)"
-                value={newEvent.promo}
-                onChange={handleChange}
-                className="w-full p-2 rounded-lg bg-gray-800 text-white"
-              />
-              <input
-                type="text"
-                name="category"
-                placeholder="Catégorie"
-                value={newEvent.category}
-                onChange={handleChange}
-                className="w-full p-2 rounded-lg bg-gray-800 text-white"
-              />
-              <input
-                type="url"
-                name="lien"
-                placeholder="Lien (facultatif)"
-                value={newEvent.lien}
-                onChange={handleChange}
-                className="w-full p-2 rounded-lg bg-gray-800 text-white"
-              />
-              <div className="flex justify-between mt-4">
-                <button
-                  type="button"
-                  onClick={() => setIsAddModalOpen(false)}
-                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-500"
-                >
-                  Annuler
-                </button>
-                <button
-                  type="submit"
-                  className="px-2 py-1 sm:px-4 sm:py-2 bg-green-500 text-white rounded-lg hover:bg-green-400"
-                >
-                  Ajouter
-                </button>
-              </div>
+            <input
+              type="date"
+              name="date"
+              value={newEvent.date}
+              onChange={handleChange}
+              className="w-full p-2 rounded-lg bg-gray-800 text-white"
+            />
+            <input
+              type="text"
+              name="name"
+              placeholder="Nom de l'événement"
+              value={newEvent.name}
+              onChange={handleChange}
+              className="w-full p-2 rounded-lg bg-gray-800 text-white"
+            />
+            <textarea
+              name="description"
+              placeholder="Description"
+              value={newEvent.description}
+              onChange={handleChange}
+              className="w-full p-2 rounded-lg bg-gray-800 text-white"
+            />
+            <input
+              type="number"
+              name="promo"
+              placeholder="Promo (%)"
+              value={newEvent.promo}
+              onChange={handleChange}
+              className="w-full p-2 rounded-lg bg-gray-800 text-white"
+            />
+
+            {/* Remplacer l'input de catégorie par un select */}
+            <select
+              name="category"
+              value={newEvent.category}
+              onChange={handleChange}
+              className="w-full p-2 rounded-lg bg-gray-800 text-white"
+            >
+              <option value="">Sélectionnez une catégorie</option>
+              <option value="Musées">Musées</option>
+              <option value="Concerts">Concerts</option>
+              <option value="Randonnée">Randonnée</option>
+              <option value="Restaurants">Restaurants</option>
+              <option value="Cinéma">Cinéma</option>
+              <option value="Parcs">Parcs</option>
+              <option value="Spas">Spas</option>
+              <option value="Festivals">Festivals</option>
+              <option value="Sports">Sports</option>
+              <option value="Bars">Bars</option>
+            </select>
+
+            <input
+              type="url"
+              name="lien"
+              placeholder="Lien (facultatif)"
+              value={newEvent.lien}
+              onChange={handleChange}
+              className="w-full p-2 rounded-lg bg-gray-800 text-white"
+            />
+            <div className="flex justify-between mt-4">
+              <button
+                type="button"
+                onClick={() => setIsAddModalOpen(false)}
+                className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-500"
+              >
+                Annuler
+              </button>
+              <button
+                type="submit"
+                className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-400"
+              >
+                Ajouter
+              </button>
+            </div>
             </form>
           </div>
         </div>

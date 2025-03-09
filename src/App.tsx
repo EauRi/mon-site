@@ -170,7 +170,7 @@ export default function Calendar() {
             <div
               key={index}
               className="h-32 border flex flex-col items-start p-2 bg-gray-800 rounded-lg text-lg font-semibold relative">
-              <span>{day || ""}</span>
+              <span className="text-xs">{day || ""}</span>
               {eventForDay && (
                 <button
                   onClick={() => setSelectedEvent(eventForDay)} // Clic pour ouvrir la modale
